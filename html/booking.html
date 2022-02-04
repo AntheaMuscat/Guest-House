@@ -43,6 +43,16 @@
             </div>
 
             <div class="input-row">
+                <label for="id_type">ID Type</label>
+                <select name="id_type" id="id_type">
+                    <option value="N/A" disabled selected>-- Choose Option --</option>
+                    <option value="Identification Card">Identification Card</option>
+                    <option value="Passport">Passport</option>
+                    <option value="Driving License">Driving License</option>
+                </select>
+            </div>
+
+            <div class="input-row">
                 <input type="text" name="ID" placeholder="ID Number" required></p>
             </div>
 
@@ -59,14 +69,13 @@
             <div class="input-row">
                 <label for="rooms">Number of Rooms</label>
                 <div id="range-container">
-                    <input type="range" min="1" max="4" value="2" name="numberOfRooms" oninput="updateNextInput(this)">
-                    </p>
+                    <input type="range" min="1" max="4" value="2" name="numberOfRooms" oninput="updateSpan(this)">
                     <span id="rangeValue">2</span>
                 </div>
 
                 <script>
-                    function updateNextInput(element) {
-                        document.getElementById("rangeValue").innerText = element.value
+                    function updateSpan(element) {
+                        document.getElementById("rangeValue").innerText = element.value;
                     }
                 </script>
             </div>

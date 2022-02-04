@@ -4,7 +4,7 @@ footer {
 }
 
 body {
-    height: 120vh;
+    height: 130vh;
 }
 
 section {
@@ -13,7 +13,7 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    margin-top: 100px;
+    margin-top: 140px;
 }
 
 form {
@@ -34,7 +34,8 @@ form {
     display: block;
 }
 
-.input-row input {
+.input-row input,
+select {
     background-color: transparent;
     color: white;
     outline: none;
@@ -43,7 +44,12 @@ form {
     width: 96%;
 }
 
-.input-row input:not([type="range"]) {
+select option {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.input-row input:not([type="range"]),
+select {
     border-bottom: 1px solid white;
 }
 
@@ -88,6 +94,13 @@ input[type="submit"] {
     border: none;
     cursor: pointer;
     padding: 10px;
+    transition: 0.2s;
+}
+
+input[type="submit"]:hover {
+    transition: 0.2s;
+    background-color: white;
+    color: #417fdb;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
