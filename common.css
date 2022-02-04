@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    height: 200vh;
+}
+
+nav {
+    background-color: #0009;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+
+    width: 98%;
+    padding: 1%;
+    position: fixed;
+    z-index: 1;
+    color: #ffffff;
+}
+
+#links {
+    display: flex;
+    gap: 1vw;
+}
+
+nav a {
+    text-decoration: none;
+    color: #c3d2d3;
+}
+
+nav a:hover {
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+footer {
+    z-index: 1;
+    bottom: 0;
+    width: 98%;
+    padding: 1%;
+    background-color: #000000d1;
+    color: white;
+}
