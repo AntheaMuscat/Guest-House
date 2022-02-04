@@ -1,0 +1,91 @@
+footer {
+    position: relative;
+    bottom: 0;
+}
+
+body {
+    height: 120vh;
+}
+
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin-top: 100px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2%;
+    width: 40%;
+    margin: auto;
+}
+
+.input-row {
+    padding: 2%;
+}
+
+.input-row label {
+    display: block;
+}
+
+.input-row input {
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 2%;
+    width: 96%;
+}
+
+.input-row input:not([type="range"]) {
+    border-bottom: 1px solid white;
+}
+
+form textarea {
+    resize: none;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 2%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+#range-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#range-container input[type="number"] {
+    appearance: textfield;
+    width: fit-content;
+}
+
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-moz-range-track {
+    background-color: #417fdb;
+    height: 0.5rem;
+    border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb {
+    background-color: white;
+    border: none;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    background-color: #417fdb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
