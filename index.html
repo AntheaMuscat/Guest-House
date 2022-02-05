@@ -7,16 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guest House</title>
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/index.css">
 
+    <!-- Other Libraries -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/fontawesome/css/all.min.css">
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Hamburger Menu Resources -->
+    <link rel="stylesheet" href="./resources/hamburger-menu/css/style.css">
+    <script src="./scripts/hamburger.js"></script>
 </head>
 
 <body>
+    <!-- Large Screens NavBar -->
     <nav>
         <h3 id="page-name">Guest House</h3>
 
@@ -27,6 +47,25 @@
         </div>
     </nav>
 
+    <!-- Small Screens NavBar -->
+    <div id="hamburger_menu">
+        <div class="hamburger" id="hambuger_menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="menu_body" id="menubody">
+            <div class="menu_body__item_wrapper">
+                <ul class="menu_list">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./html/booking.html">Book Online</a></li>
+                    <li><a href="./html/contact.html">Contact Information</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div id="bg-img"></div>
     <div class="container">
         <h1>Sam's Guest House</h1>
@@ -35,7 +74,7 @@
 
     <section id="guest_house_info">
         <div id="details">
-            <h1 id="title">Sam's Guest House</h1>
+            <p id="title">Sam's Guest House</p>
 
             <div>
                 <i class="fas fa-star"></i>
@@ -46,7 +85,7 @@
                         target="_blank">St. Julians</a></small>
             </div>
 
-            <div divider></div>
+            <div class="divider"></div>
             <div id="description">
                 <h3>About this Space</h3>
 
@@ -98,7 +137,7 @@
                     either end lead back to the bedroom or into the dressing area.</p>
             </div>
 
-            <div divider></div>
+            <div class="divider"></div>
             <div id="amenities">
                 <h3>What this place offers</h3>
                 <p><i class="fas fa-wifi"></i> Wifi</p>
@@ -121,7 +160,7 @@
             </div>
 
             <div class="gmap_canvas">
-                <iframe id="gmap_canvas" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                <iframe id="gmap_canvas"
                     src="https://maps.google.com/maps?q=35.926937,%2014.488538&t=&z=15&ie=UTF8&iwloc=&output=embed">
                 </iframe>
             </div>

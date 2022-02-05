@@ -7,15 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guest House</title>
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/booking.css">
 
+    <!-- Other Libraries -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Hamburger Menu Resources -->
+    <link rel="stylesheet" href="../resources/hamburger-menu/css/style.css">
+    <script src="../scripts/hamburger.js"></script>
+
+    <script src="../scripts/booking.js"></script>
 </head>
 
 <body>
+    <!-- Large Screens NavBar -->
     <nav>
         <h3 id="page-name">Guest House</h3>
 
@@ -26,24 +48,43 @@
         </div>
     </nav>
 
+    <!-- Small Screens NavBar -->
+    <div id="hamburger_menu">
+        <div class="hamburger" id="hambuger_menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="menu_body" id="menubody">
+            <div class="menu_body__item_wrapper">
+                <ul class="menu_list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./booking.html">Book Online</a></li>
+                    <li><a href="./contact.html">Contact Information</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div id="bg-img"></div>
-    <section>
+    <section id="form-section">
         <form>
             <h1>Book Online</h1>
             <div class="input-row">
-                <input type="text" name="firstName" placeholder="First Name" required></p>
+                <input type="text" name="firstName" placeholder="First Name*" required>
             </div>
 
             <div class="input-row">
-                <input type="text" name="surname" placeholder="Last Name" required></p>
+                <input type="text" name="surname" placeholder="Last Name*" required>
             </div>
 
             <div class="input-row">
-                <input type="email" name="email" placeholder="Email" required></p>
+                <input type="email" name="email" placeholder="Email*" required>
             </div>
 
             <div class="input-row">
-                <label for="id_type">ID Type</label>
+                <label for="id_type">ID Type*</label>
                 <select name="id_type" id="id_type">
                     <option value="N/A" disabled selected>-- Choose Option --</option>
                     <option value="Identification Card">Identification Card</option>
@@ -53,35 +94,30 @@
             </div>
 
             <div class="input-row">
-                <input type="text" name="ID" placeholder="ID Number" required></p>
+                <input type="text" name="ID" placeholder="ID Number*" required>
             </div>
 
             <div class="input-row">
-                <label for="check_in">Check in</label>
-                <input type="date" name="checkInDate"></p>
+                <label for="check_in">Check in*</label>
+                <input type="date" name="checkInDate" id="check_in">
             </div>
 
             <div class="input-row">
-                <label for="check_out">Check out</label>
-                <input type="date" name="checkOutDate"></p>
+                <label for="check_out">Check out*</label>
+                <input type="date" name="checkOutDate" id="check_out">
             </div>
 
             <div class="input-row">
-                <label for="rooms">Number of Rooms</label>
+                <label for="rooms">Number of Rooms*</label>
                 <div id="range-container">
-                    <input type="range" min="1" max="4" value="2" name="numberOfRooms" oninput="updateSpan(this)">
+                    <input type="range" id="rooms" min="1" max="4" value="2" name="numberOfRooms"
+                        oninput="updateSpan(this)">
                     <span id="rangeValue">2</span>
                 </div>
-
-                <script>
-                    function updateSpan(element) {
-                        document.getElementById("rangeValue").innerText = element.value;
-                    }
-                </script>
             </div>
 
             <label for="requirements">Special Requirements</label>
-            <textarea name="requirements" rows="7" cols="40"></textarea>
+            <textarea name="requirements" id="requirements" rows="7" cols="40"></textarea>
 
             <input type="submit" value="Book Now">
         </form>

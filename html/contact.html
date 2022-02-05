@@ -7,15 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guest House</title>
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/contact.css">
 
+    <!-- Other Libraries -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <!-- JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+    <!-- Hamburger Menu Resources -->
+    <link rel="stylesheet" href="../resources/hamburger-menu/css/style.css">
+    <script src="../scripts/hamburger.js"></script>
 </head>
 
 <body>
+    <!-- Large Screens NavBar -->
     <nav>
         <h3 id="page-name">Guest House</h3>
 
@@ -23,10 +44,54 @@
             <a href="../index.html">Home</a>
             <a href="./booking.html">Book Online</a>
             <a href="./contact.html">Contact Information</a>
-        </div>    
+        </div>
     </nav>
 
+    <!-- Small Screens NavBar -->
+    <div id="hamburger_menu">
+        <div class="hamburger" id="hambuger_menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="menu_body" id="menubody">
+            <div class="menu_body__item_wrapper">
+                <ul class="menu_list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./booking.html">Book Online</a></li>
+                    <li><a href="./contact.html">Contact Information</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div id="bg-img"></div>
+    <section id="contact-form">
+        <form>
+            <h1>Contact Us</h1>
+            <div class="input-row">
+                <input type="text" name="firstName" placeholder="First Name*" required>
+            </div>
+
+            <div class="input-row">
+                <input type="text" name="surname" placeholder="Last Name*" required>
+            </div>
+
+            <div class="input-row">
+                <input type="email" name="email" placeholder="Email*" required>
+            </div>
+
+            <label for="message">Message*</label>
+            <textarea name="message" id="message" rows="7" cols="40" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <h3>&copy; 2022 - Anthea Muscat</h3>
+    </footer>
 </body>
 
 </html>

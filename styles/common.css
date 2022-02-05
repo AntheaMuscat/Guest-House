@@ -5,7 +5,8 @@
 }
 
 body {
-    height: 100vh;
+    overflow-x: hidden;
+    height: 130vh;
 }
 
 #bg-img {
@@ -25,12 +26,20 @@ nav {
     justify-content: space-between;
     align-items: center;
     font-size: larger;
-
     width: 98%;
     padding: 1%;
     position: fixed;
     z-index: 1;
     color: #ffffff;
+}
+
+#menubody {
+    z-index: 1;
+}
+
+#hamburger_menu {
+    z-index: 10;
+    display: none;
 }
 
 #links {
@@ -49,10 +58,35 @@ nav a:hover {
 }
 
 footer {
-    z-index: 1;
+    position: relative;
     bottom: 0;
     width: 98%;
     padding: 1%;
     background-color: #000000d1;
     color: white;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    body {
+        height: 100vh;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #hamburger_menu {
+        display: block;
+        z-index: 1;
+    }
+
+    footer {
+        padding: 2.5%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #hamburger_menu {
+        display: none;
+    }
 }

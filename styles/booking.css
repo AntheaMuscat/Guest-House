@@ -3,17 +3,13 @@ footer {
     bottom: 0;
 }
 
-body {
-    height: 130vh;
-}
-
-section {
+#form-section {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    margin-top: 140px;
+    margin-top: 20px;
 }
 
 form {
@@ -104,13 +100,23 @@ input[type="submit"]:hover {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+    body {
+        height: 130vh;
+    }
+
     form {
         width: 80%;
+        padding: 4%;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     form {
         width: 60%;
+        padding: 4%;
+    }
+
+    #form-section {
+        margin-top: 140px;
     }
 }
