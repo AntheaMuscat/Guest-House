@@ -69,7 +69,7 @@
 
     <div id="bg-img"></div>
     <section id="form-section">
-        <form>
+        <form onsubmit="submitForm()">
             <h1>Book Online</h1>
             <div class="input-row">
                 <input type="text" name="firstName" placeholder="First Name*" required>
@@ -83,7 +83,7 @@
                 <input type="email" name="email" placeholder="Email*" required>
             </div>
 
-            <div class="input-row">
+            <div class="input-row">     
                 <label for="id_type">ID Type*</label>
                 <select name="id_type" id="id_type">
                     <option value="N/A" disabled selected>-- Choose Option --</option>
