@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    height: 140vh;
+}
+
+#bg-img {
+    position: relative;
+    background-image: url("../images/GuestHouse.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    filter: brightness(80%) blur(2px);
+    z-index: -1;
+}
+
+nav {
+    background-color: #0009;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+    width: 98%;
+    padding: 1%;
+    position: fixed;
+    z-index: 1;
+    color: #ffffff;
+}
+
+#menubody {
+    z-index: 1;
+}
+
+#hamburger_menu {
+    z-index: 10;
+    display: none;
+}
+
+#links {
+    display: flex;
+    gap: 1vw;
+}
+
+nav a {
+    text-decoration: none;
+    color: #c3d2d3;
+}
+
+nav a:hover {
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 98%;
+    padding: 1%;
+    background-color: #000000d1;
+    color: white;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    body {
+        height: 100vh;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #hamburger_menu {
+        display: block;
+        z-index: 1;
+    }
+
+    footer {
+        padding: 2.5%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #hamburger_menu {
+        display: none;
+    }
+}
